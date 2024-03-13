@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>LOADER</title>
+</head>
+<body>
+    <h2>About</h2>
+    <a href="index.html">Home</a>
+    <br><br>
+    <img src="corso.webp" alt="">
+    <div class="loader"></div>
+</body>
+
+
+
+
+<script>
+    window.addEventListener("load",()=>{
+        const loader=document.querySelector(".loader");
+
+        loader.classList.add("loader-hidden");
+
+        loader.addEventListener("transitionend",()=>{
+            document.body.removeChild("loader");
+        })
+    })
+</script>
+</html>
